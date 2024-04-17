@@ -1,10 +1,9 @@
 fn main() {
-    let tuple: (u8,bool,f32) = (5,true,2.1);
-    println!("first: {}, second: {}, third: {}",tuple.0,tuple.1,tuple.2);
-    println!("{:?}",tuple);
-
-    // destructuring or reassigning the value of tuple to a,b,c
-    let (a,b,c) = tuple;
-
-    println!("{},{},{}", a,b,c);
+    let i = 2;
+    match i {
+        0 => println!("0"),       // if i = 0
+        1 | 2 => println!("1,2"), // if i = 1 or 2
+        3..=10 => println!("3,4"), // if i = 3 to 4
+        _ => println!("default")   // if non of the above
+    }
 }
